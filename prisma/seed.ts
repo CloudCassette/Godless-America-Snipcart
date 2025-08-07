@@ -119,6 +119,21 @@ async function main() {
       isFeatured: false,
       categoryId: accessoryCategory?.id!,
     },
+    // Add your custom products here
+    {
+      name: 'Custom Product Name',
+      slug: 'custom-product-slug',
+      description: 'Your product description here.',
+      price: 49.99,
+      compareAtPrice: 59.99, // Optional sale price
+      images: ['/images/products/your-product.jpg'],
+      inventory: 25,
+      sku: 'CUSTOM-001',
+      weight: 0.3,
+      isActive: true,
+      isFeatured: true,
+      categoryId: tshirtCategory?.id!, // Use appropriate category
+    },
   ]
 
   for (const productData of products) {

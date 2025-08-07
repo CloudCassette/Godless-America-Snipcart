@@ -12,7 +12,8 @@
     "docker:up": "docker-compose up -d",
     "docker:down": "docker-compose down",
     "db:migrate": "npx prisma migrate dev",
-    "db:seed": "npx prisma db seed"
+    "db:seed": "npx prisma db seed",
+    "add-product": "node scripts/add-product.js"
   },
   "dependencies": {
     "next": "^14.0.0",
