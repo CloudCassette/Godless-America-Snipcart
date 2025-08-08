@@ -3,8 +3,20 @@ import type { AppProps } from 'next/app'
 import Head from 'next/head'
 import Script from 'next/script'
 import { AuthProvider } from '@/lib/auth'
+import { useEffect } from 'react'
 
 export default function App({ Component, pageProps }: AppProps) {
+  useEffect(() => {
+    // Set default dark theme on initial load
+    const savedTheme = localStorage.getItem('godless-theme')
+    if (!savedTheme) {
+      document.body.classList.add('dark-theme')
+      localStorage.setItem('godless-theme', 'dark')
+    } else if (savedTheme === 'dark') {
+      document.body.classList.add('dark-theme')
+    }
+  }, [])
+
   return (
     <AuthProvider>
       <Head>

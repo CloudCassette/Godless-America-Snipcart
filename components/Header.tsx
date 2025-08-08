@@ -43,8 +43,9 @@ export default function Header() {
             {/* Theme Toggle */}
             <button
               onClick={toggleTheme}
-              className="text-gray-700 hover:text-primary-600 transition-colors duration-200"
-              aria-label="Toggle theme"
+              className="theme-toggle text-gray-700 hover:text-primary-600 transition-colors duration-200"
+              aria-label={isDark ? 'Switch to light mode' : 'Switch to dark mode'}
+              title={isDark ? 'Switch to light mode' : 'Switch to dark mode'}
             >
               {isDark ? '☀️' : '🌙'}
             </button>

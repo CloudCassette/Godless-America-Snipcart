@@ -1,66 +1,88 @@
-/* ===== GODLESS AMERICA DARK THEME ===== */
+/* ===== GODLESS AMERICA THEME SYSTEM ===== */
 
-/* Root Variables - Dark Theme */
+/* Root Variables - Light Theme (Default) */
 :root {
-  --dark-bg-primary: #0f0f0f;
-  --dark-bg-secondary: #1a1a1a;
-  --dark-bg-tertiary: #2d2d2d;
-  --dark-text-primary: #ffffff;
-  --dark-text-secondary: #b3b3b3;
-  --dark-text-muted: #666666;
-  --dark-accent: #dc2626;
-  --dark-accent-hover: #b91c1c;
-  --dark-border: #333333;
-  --dark-border-light: #404040;
+  --bg-primary: #ffffff;
+  --bg-secondary: #f9fafb;
+  --bg-tertiary: #f3f4f6;
+  --text-primary: #1f2937;
+  --text-secondary: #6b7280;
+  --text-muted: #9ca3af;
+  --accent: #dc2626;
+  --accent-hover: #b91c1c;
+  --border: #e5e7eb;
+  --border-light: #f3f4f6;
 }
 
-/* Main Background */
+/* Dark Theme Variables */
+.dark-theme {
+  --bg-primary: #0f0f0f;
+  --bg-secondary: #1a1a1a;
+  --bg-tertiary: #2d2d2d;
+  --text-primary: #ffffff;
+  --text-secondary: #b3b3b3;
+  --text-muted: #666666;
+  --accent: #dc2626;
+  --accent-hover: #b91c1c;
+  --border: #333333;
+  --border-light: #404040;
+}
+
+/* Apply theme variables to all elements */
 body {
-  background-color: var(--dark-bg-primary) !important;
-  color: var(--dark-text-primary) !important;
+  background-color: var(--bg-primary) !important;
+  color: var(--text-primary) !important;
+  transition: background-color 0.3s ease, color 0.3s ease !important;
 }
 
 /* Header & Navigation */
 header,
 .header,
 nav {
-  background-color: var(--dark-bg-secondary) !important;
-  border-bottom: 1px solid var(--dark-border) !important;
+  background-color: var(--bg-secondary) !important;
+  border-bottom: 1px solid var(--border) !important;
+  transition: background-color 0.3s ease !important;
 }
 
 header a,
 nav a,
 .nav-link {
-  color: var(--dark-text-primary) !important;
+  color: var(--text-primary) !important;
+  transition: color 0.3s ease !important;
 }
 
 header a:hover,
 nav a:hover,
 .nav-link:hover {
-  color: var(--dark-accent) !important;
+  color: var(--accent) !important;
 }
 
 /* Logo */
-.logo {
+.dark-theme .logo {
   filter: brightness(0) invert(1);
 }
 
 /* Hero Section */
 .hero,
 .hero-section {
-  background: linear-gradient(135deg, var(--dark-bg-primary) 0%, var(--dark-bg-secondary) 100%) !important;
-  color: var(--dark-text-primary) !important;
+  background: linear-gradient(135deg, var(--bg-primary) 0%, var(--bg-secondary) 100%) !important;
+  color: var(--text-primary) !important;
+  transition: background 0.3s ease, color 0.3s ease !important;
 }
 
 .hero h1,
 .hero-title {
-  color: var(--dark-text-primary) !important;
+  color: var(--text-primary) !important;
+}
+
+.dark-theme .hero h1,
+.dark-theme .hero-title {
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
 }
 
 .hero p,
 .hero-subtitle {
-  color: var(--dark-text-secondary) !important;
+  color: var(--text-secondary) !important;
 }
 
 /* Cards & Containers */
@@ -68,33 +90,38 @@ nav a:hover,
 .product-card,
 .category-card,
 .bg-white {
-  background-color: var(--dark-bg-secondary) !important;
-  border: 1px solid var(--dark-border) !important;
-  color: var(--dark-text-primary) !important;
+  background-color: var(--bg-secondary) !important;
+  border: 1px solid var(--border) !important;
+  color: var(--text-primary) !important;
+  transition: all 0.3s ease !important;
 }
 
 .card:hover,
 .product-card:hover {
-  background-color: var(--dark-bg-tertiary) !important;
-  border-color: var(--dark-border-light) !important;
+  background-color: var(--bg-tertiary) !important;
+  border-color: var(--border-light) !important;
   transform: translateY(-2px);
+}
+
+.dark-theme .card:hover,
+.dark-theme .product-card:hover {
   box-shadow: 0 8px 25px rgba(220, 38, 38, 0.15) !important;
 }
 
 /* Product Cards */
 .product-card .price {
-  color: var(--dark-accent) !important;
+  color: var(--accent) !important;
   font-weight: bold;
 }
 
 .product-card .title,
 .product-card h3 {
-  color: var(--dark-text-primary) !important;
+  color: var(--text-primary) !important;
 }
 
 .product-card .description,
 .product-card p {
-  color: var(--dark-text-secondary) !important;
+  color: var(--text-secondary) !important;
 }
 
 /* Buttons */
@@ -102,9 +129,9 @@ nav a:hover,
 button,
 .snipcart-add-item,
 .btn-primary {
-  background-color: var(--dark-accent) !important;
+  background-color: var(--accent) !important;
   color: white !important;
-  border: 1px solid var(--dark-accent) !important;
+  border: 1px solid var(--accent) !important;
   transition: all 0.3s ease !important;
 }
 
@@ -112,24 +139,30 @@ button,
 button:hover,
 .snipcart-add-item:hover,
 .btn-primary:hover {
-  background-color: var(--dark-accent-hover) !important;
-  border-color: var(--dark-accent-hover) !important;
+  background-color: var(--accent-hover) !important;
+  border-color: var(--accent-hover) !important;
   transform: translateY(-1px);
+}
+
+.dark-theme .btn:hover,
+.dark-theme button:hover,
+.dark-theme .snipcart-add-item:hover,
+.dark-theme .btn-primary:hover {
   box-shadow: 0 4px 12px rgba(220, 38, 38, 0.3) !important;
 }
 
 .btn-secondary,
 .btn-outline {
   background-color: transparent !important;
-  color: var(--dark-text-primary) !important;
-  border: 2px solid var(--dark-border-light) !important;
+  color: var(--text-primary) !important;
+  border: 2px solid var(--border-light) !important;
 }
 
 .btn-secondary:hover,
 .btn-outline:hover {
-  background-color: var(--dark-bg-tertiary) !important;
-  border-color: var(--dark-accent) !important;
-  color: var(--dark-accent) !important;
+  background-color: var(--bg-tertiary) !important;
+  border-color: var(--accent) !important;
+  color: var(--accent) !important;
 }
 
 /* Forms & Inputs */
@@ -138,9 +171,10 @@ textarea,
 select,
 .form-control,
 .input-field {
-  background-color: var(--dark-bg-tertiary) !important;
-  border: 1px solid var(--dark-border) !important;
-  color: var(--dark-text-primary) !important;
+  background-color: var(--bg-tertiary) !important;
+  border: 1px solid var(--border) !important;
+  color: var(--text-primary) !important;
+  transition: all 0.3s ease !important;
 }
 
 input:focus,
@@ -148,102 +182,110 @@ textarea:focus,
 select:focus,
 .form-control:focus,
 .input-field:focus {
-  border-color: var(--dark-accent) !important;
+  border-color: var(--accent) !important;
+  background-color: var(--bg-secondary) !important;
+}
+
+.dark-theme input:focus,
+.dark-theme textarea:focus,
+.dark-theme select:focus,
+.dark-theme .form-control:focus,
+.dark-theme .input-field:focus {
   box-shadow: 0 0 0 2px rgba(220, 38, 38, 0.2) !important;
-  background-color: var(--dark-bg-secondary) !important;
 }
 
 input::placeholder,
 textarea::placeholder {
-  color: var(--dark-text-muted) !important;
+  color: var(--text-muted) !important;
 }
 
 /* Labels */
 label,
 .form-label {
-  color: var(--dark-text-secondary) !important;
+  color: var(--text-secondary) !important;
 }
 
 /* Footer */
 footer {
-  background-color: var(--dark-bg-secondary) !important;
-  border-top: 1px solid var(--dark-border) !important;
-  color: var(--dark-text-secondary) !important;
+  background-color: var(--bg-secondary) !important;
+  border-top: 1px solid var(--border) !important;
+  color: var(--text-secondary) !important;
+  transition: all 0.3s ease !important;
 }
 
 footer a {
-  color: var(--dark-text-secondary) !important;
+  color: var(--text-secondary) !important;
 }
 
 footer a:hover {
-  color: var(--dark-accent) !important;
+  color: var(--accent) !important;
 }
 
 /* Typography */
 h1, h2, h3, h4, h5, h6 {
-  color: var(--dark-text-primary) !important;
+  color: var(--text-primary) !important;
 }
 
 p, span, div {
-  color: var(--dark-text-secondary);
+  color: var(--text-secondary);
 }
 
 .text-gray-900 {
-  color: var(--dark-text-primary) !important;
+  color: var(--text-primary) !important;
 }
 
 .text-gray-600,
 .text-gray-500 {
-  color: var(--dark-text-secondary) !important;
+  color: var(--text-secondary) !important;
 }
 
 .text-gray-400 {
-  color: var(--dark-text-muted) !important;
+  color: var(--text-muted) !important;
 }
 
 /* Tailwind Overrides */
 .bg-primary-600 {
-  background-color: var(--dark-accent) !important;
+  background-color: var(--accent) !important;
 }
 
 .bg-primary-700 {
-  background-color: var(--dark-accent-hover) !important;
+  background-color: var(--accent-hover) !important;
 }
 
 .text-primary-600 {
-  color: var(--dark-accent) !important;
+  color: var(--accent) !important;
 }
 
 .border-primary-500 {
-  border-color: var(--dark-accent) !important;
+  border-color: var(--accent) !important;
 }
 
-/* Category Grid */
-.grid > div,
-.grid-item {
-  background-color: var(--dark-bg-secondary) !important;
-  border: 1px solid var(--dark-border) !important;
+/* Background Utilities */
+.bg-gray-50,
+.bg-gray-100 {
+  background-color: var(--bg-secondary) !important;
 }
 
-.grid > div:hover,
-.grid-item:hover {
-  background-color: var(--dark-bg-tertiary) !important;
-  border-color: var(--dark-accent) !important;
-}
-
-/* Featured Products */
-.space-y-8 > div,
-.space-y-6 > div {
-  background-color: var(--dark-bg-secondary) !important;
+.bg-gray-200 {
+  background-color: var(--bg-tertiary) !important;
 }
 
 /* Shadows & Effects */
 .shadow,
 .shadow-lg {
+  transition: box-shadow 0.3s ease !important;
+}
+
+.dark-theme .shadow,
+.dark-theme .shadow-lg {
   box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3), 0 4px 6px -2px rgba(0, 0, 0, 0.1) !important;
 }
 
 .shadow-sm {
+  transition: box-shadow 0.3s ease !important;
+}
+
+.dark-theme .shadow-sm {
   box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2) !important;
 }
 
@@ -251,56 +293,86 @@ p, span, div {
 .border,
 .border-gray-200,
 .border-gray-300 {
-  border-color: var(--dark-border) !important;
+  border-color: var(--border) !important;
 }
 
-/* Background Utilities */
-.bg-gray-50,
-.bg-gray-100 {
-  background-color: var(--dark-bg-secondary) !important;
+/* Theme Toggle Button Styling */
+.theme-toggle {
+  background: var(--bg-tertiary) !important;
+  border: 1px solid var(--border) !important;
+  border-radius: 50% !important;
+  width: 40px !important;
+  height: 40px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  transition: all 0.3s ease !important;
 }
 
-.bg-gray-200 {
-  background-color: var(--dark-bg-tertiary) !important;
+.theme-toggle:hover {
+  background: var(--accent) !important;
+  color: white !important;
+  transform: scale(1.1) !important;
 }
 
-/* Scrollbar Styling */
-::-webkit-scrollbar {
+/* Scrollbar Styling for Dark Theme */
+.dark-theme ::-webkit-scrollbar {
   width: 8px;
 }
 
-::-webkit-scrollbar-track {
-  background: var(--dark-bg-secondary);
+.dark-theme ::-webkit-scrollbar-track {
+  background: var(--bg-secondary);
 }
 
-::-webkit-scrollbar-thumb {
-  background: var(--dark-border-light);
+.dark-theme ::-webkit-scrollbar-thumb {
+  background: var(--border-light);
   border-radius: 4px;
 }
 
-::-webkit-scrollbar-thumb:hover {
-  background: var(--dark-accent);
+.dark-theme ::-webkit-scrollbar-thumb:hover {
+  background: var(--accent);
+}
+
+/* Animations */
+@keyframes themeTransition {
+  0% { opacity: 0.8; }
+  100% { opacity: 1; }
+}
+
+.theme-transition {
+  animation: themeTransition 0.3s ease;
 }
 
 /* Mobile Responsive */
 @media (max-width: 768px) {
   .card,
   .product-card {
-    background-color: var(--dark-bg-secondary) !important;
     margin-bottom: 1rem;
   }
-}
-
-/* Animations */
-@keyframes darkPulse {
-  0%, 100% {
-    box-shadow: 0 0 0 0 rgba(220, 38, 38, 0.4);
-  }
-  50% {
-    box-shadow: 0 0 0 10px rgba(220, 38, 38, 0);
+  
+  .theme-toggle {
+    width: 35px !important;
+    height: 35px !important;
   }
 }
 
-.pulse-dark {
-  animation: darkPulse 2s infinite;
+/* Snipcart Dark Theme Overrides */
+.dark-theme .snipcart-modal,
+.dark-theme .snipcart-cart {
+  background-color: var(--bg-primary) !important;
+  color: var(--text-primary) !important;
+}
+
+.dark-theme .snipcart-modal__container {
+  background-color: var(--bg-secondary) !important;
+  border: 1px solid var(--border) !important;
+}
+
+/* Special effects for Godless America brand */
+.dark-theme .brand-glow {
+  text-shadow: 0 0 10px rgba(220, 38, 38, 0.5) !important;
+}
+
+.dark-theme .card-glow:hover {
+  box-shadow: 0 0 20px rgba(220, 38, 38, 0.2) !important;
 }
