@@ -368,6 +368,268 @@ p, span, div {
   border: 1px solid var(--border) !important;
 }
 
+/* Comprehensive Snipcart Dark Theme */
+.dark-theme #snipcart,
+.dark-theme .snipcart,
+.dark-theme .snipcart-modal,
+.dark-theme .snipcart-modal__container,
+.dark-theme .snipcart-cart-summary,
+.dark-theme .snipcart-cart-summary--edit,
+.dark-theme .snipcart-cart-summary-side,
+.dark-theme .snipcart-layout,
+.dark-theme .snipcart-modal,
+.dark-theme .snipcart-layout__content,
+.dark-theme .snipcart-layout__content--side,
+.dark-theme .snipcart-cart,
+.dark-theme .snipcart-cart--edit {
+  background-color: var(--bg-primary) !important;
+  color: var(--text-primary) !important;
+}
+
+/* Snipcart Header */
+.dark-theme .snipcart-cart-header,
+.dark-theme .snipcart-modal__header {
+  background-color: var(--bg-secondary) !important;
+  border-bottom: 1px solid var(--border) !important;
+  color: var(--text-primary) !important;
+}
+
+/* Snipcart Items */
+.dark-theme .snipcart-item,
+.dark-theme .snipcart-cart-line,
+.dark-theme .snipcart-item__header,
+.dark-theme .snipcart-item__content {
+  background-color: var(--bg-secondary) !important;
+  border: 1px solid var(--border) !important;
+  color: var(--text-primary) !important;
+}
+
+.dark-theme .snipcart-item:hover {
+  background-color: var(--bg-tertiary) !important;
+}
+
+/* Snipcart Text Elements */
+.dark-theme .snipcart-item__header__title,
+.dark-theme .snipcart-item__header__title a,
+.dark-theme .snipcart-cart-line__product,
+.dark-theme .snipcart-cart-line__product a,
+.dark-theme .snipcart-cart-summary__title,
+.dark-theme .snipcart-cart-summary__count,
+.dark-theme .snipcart-cart-summary__total,
+.dark-theme .snipcart-label,
+.dark-theme .snipcart-text {
+  color: var(--text-primary) !important;
+}
+
+/* Snipcart Buttons */
+.dark-theme .snipcart-button--primary,
+.dark-theme .snipcart-add-item,
+.dark-theme .snipcart-checkout {
+  background-color: var(--accent) !important;
+  border-color: var(--accent) !important;
+  color: white !important;
+}
+
+.dark-theme .snipcart-button--primary:hover,
+.dark-theme .snipcart-add-item:hover,
+.dark-theme .snipcart-checkout:hover {
+  background-color: var(--accent-hover) !important;
+  border-color: var(--accent-hover) !important;
+}
+
+.dark-theme .snipcart-button--secondary,
+.dark-theme .snipcart-button--link {
+  background-color: transparent !important;
+  color: var(--text-primary) !important;
+  border: 1px solid var(--border) !important;
+}
+
+.dark-theme .snipcart-button--secondary:hover,
+.dark-theme .snipcart-button--link:hover {
+  background-color: var(--bg-tertiary) !important;
+  color: var(--accent) !important;
+}
+
+/* Snipcart Forms */
+.dark-theme .snipcart-input,
+.dark-theme .snipcart-form__input,
+.dark-theme .snipcart-textarea,
+.dark-theme .snipcart-select {
+  background-color: var(--bg-tertiary) !important;
+  border: 1px solid var(--border) !important;
+  color: var(--text-primary) !important;
+}
+
+.dark-theme .snipcart-input:focus,
+.dark-theme .snipcart-form__input:focus,
+.dark-theme .snipcart-textarea:focus,
+.dark-theme .snipcart-select:focus {
+  border-color: var(--accent) !important;
+  background-color: var(--bg-secondary) !important;
+  box-shadow: 0 0 0 2px rgba(220, 38, 38, 0.2) !important;
+}
+
+.dark-theme .snipcart-input::placeholder,
+.dark-theme .snipcart-form__input::placeholder,
+.dark-theme .snipcart-textarea::placeholder {
+  color: var(--text-muted) !important;
+}
+
+/* Snipcart Labels */
+.dark-theme .snipcart-form__label,
+.dark-theme .snipcart-label {
+  color: var(--text-secondary) !important;
+}
+
+/* Snipcart Totals */
+.dark-theme .snipcart-cart-summary__line,
+.dark-theme .snipcart-cart-summary__total-line {
+  border-color: var(--border) !important;
+  color: var(--text-primary) !important;
+}
+
+.dark-theme .snipcart-cart-summary__amount,
+.dark-theme .snipcart-cart-summary__total-amount {
+  color: var(--accent) !important;
+  font-weight: bold;
+}
+
+/* Snipcart Close Button */
+.dark-theme .snipcart-modal__close,
+.dark-theme .snipcart-button--close {
+  color: var(--text-primary) !important;
+  background-color: transparent !important;
+  border: none !important;
+}
+
+.dark-theme .snipcart-modal__close:hover,
+.dark-theme .snipcart-button--close:hover {
+  color: var(--accent) !important;
+  background-color: var(--bg-tertiary) !important;
+}
+
+/* Snipcart Quantity Controls */
+.dark-theme .snipcart-quantity,
+.dark-theme .snipcart-quantity__trigger {
+  background-color: var(--bg-tertiary) !important;
+  border: 1px solid var(--border) !important;
+  color: var(--text-primary) !important;
+}
+
+.dark-theme .snipcart-quantity__trigger:hover {
+  background-color: var(--bg-secondary) !important;
+  border-color: var(--accent) !important;
+}
+
+/* Snipcart Loading States */
+.dark-theme .snipcart-loading,
+.dark-theme .snipcart-spinner {
+  border-color: var(--border) !important;
+  border-top-color: var(--accent) !important;
+}
+
+/* Snipcart Discounts */
+.dark-theme .snipcart-discount,
+.dark-theme .snipcart-discount__form {
+  background-color: var(--bg-secondary) !important;
+  border: 1px solid var(--border) !important;
+  color: var(--text-primary) !important;
+}
+
+/* Snipcart Payment */
+.dark-theme .snipcart-payment-methods,
+.dark-theme .snipcart-payment-methods__item {
+  background-color: var(--bg-secondary) !important;
+  border: 1px solid var(--border) !important;
+  color: var(--text-primary) !important;
+}
+
+/* Snipcart Notifications */
+.dark-theme .snipcart-notification,
+.dark-theme .snipcart-notification--success,
+.dark-theme .snipcart-notification--error {
+  background-color: var(--bg-secondary) !important;
+  border: 1px solid var(--border) !important;
+  color: var(--text-primary) !important;
+}
+
+.dark-theme .snipcart-notification--success {
+  border-color: rgba(34, 197, 94, 0.3) !important;
+  background-color: rgba(34, 197, 94, 0.1) !important;
+  color: #4ade80 !important;
+}
+
+.dark-theme .snipcart-notification--error {
+  border-color: rgba(239, 68, 68, 0.3) !important;
+  background-color: rgba(239, 68, 68, 0.1) !important;
+  color: #f87171 !important;
+}
+
+/* Snipcart Breadcrumbs */
+.dark-theme .snipcart-breadcrumb,
+.dark-theme .snipcart-breadcrumb__item {
+  color: var(--text-secondary) !important;
+}
+
+.dark-theme .snipcart-breadcrumb__item a {
+  color: var(--text-secondary) !important;
+}
+
+.dark-theme .snipcart-breadcrumb__item a:hover {
+  color: var(--accent) !important;
+}
+
+/* Snipcart Tabs */
+.dark-theme .snipcart-tabs,
+.dark-theme .snipcart-tabs__nav,
+.dark-theme .snipcart-tabs__item {
+  background-color: var(--bg-secondary) !important;
+  border-color: var(--border) !important;
+  color: var(--text-primary) !important;
+}
+
+.dark-theme .snipcart-tabs__item--active {
+  background-color: var(--bg-tertiary) !important;
+  color: var(--accent) !important;
+  border-bottom-color: var(--accent) !important;
+}
+
+/* Snipcart Footer */
+.dark-theme .snipcart-cart-summary__footer,
+.dark-theme .snipcart-modal__footer {
+  background-color: var(--bg-secondary) !important;
+  border-top: 1px solid var(--border) !important;
+}
+
+/* Force override for deeply nested Snipcart elements */
+html.snipcart-sidecart--opened body.dark-theme #snipcart *,
+html.snipcart-sidecart--opened body.dark-theme .snipcart *,
+body.dark-theme #snipcart *,
+body.dark-theme .snipcart * {
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease !important;
+}
+
+/* Override for the specific cart container you mentioned */
+html.snipcart-sidecart--opened body.dark-theme div#__next div#snipcart.snipcart div.snipcart-modal__container.snipcart-cart-summary--edit.snipcart-cart-summary-side div.snipcart-layout.snipcart-modal div.snipcart-layout__content.snipcart-layout__content--side.snipcart-cart--edit {
+  background-color: var(--bg-primary) !important;
+  color: var(--text-primary) !important;
+}
+
+/* Additional force overrides */
+html.snipcart-sidecart--opened body.dark-theme div#snipcart *,
+html.snipcart-sidecart--opened body.dark-theme .snipcart-modal__container *,
+html.snipcart-sidecart--opened body.dark-theme .snipcart-layout * {
+  background-color: var(--bg-primary) !important;
+  color: var(--text-primary) !important;
+}
+
+/* Ensure buttons maintain proper styling */
+html.snipcart-sidecart--opened body.dark-theme .snipcart-button--primary,
+html.snipcart-sidecart--opened body.dark-theme .snipcart-add-item {
+  background-color: var(--accent) !important;
+  color: white !important;
+}
+
 /* Special effects for Godless America brand */
 .dark-theme .brand-glow {
   text-shadow: 0 0 10px rgba(220, 38, 38, 0.5) !important;
