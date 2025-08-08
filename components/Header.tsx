@@ -1,8 +1,10 @@
 import React, { useState } from 'react'
 import Link from 'next/link'
+import { useTheme } from '@/lib/useTheme'
 
 export default function Header() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
+  const { isDark, toggleTheme } = useTheme()
 
   const navigation = [
     { name: 'Home', href: '/' },
@@ -19,7 +21,7 @@ export default function Header() {
           {/* Logo */}
           <Link href="/" className="flex items-center">
             <span className="text-2xl font-bold text-primary-600">
-              Your Store
+              🎸 Godless America
             </span>
           </Link>
 
@@ -36,8 +38,17 @@ export default function Header() {
             ))}
           </nav>
 
-          {/* Cart and Mobile Menu */}
+          {/* Controls */}
           <div className="flex items-center space-x-4">
+            {/* Theme Toggle */}
+            <button
+              onClick={toggleTheme}
+              className="text-gray-700 hover:text-primary-600 transition-colors duration-200"
+              aria-label="Toggle theme"
+            >
+              {isDark ? '☀️' : '🌙'}
+            </button>
+
             {/* Snipcart Cart Button */}
             <button
               className="snipcart-checkout flex items-center text-gray-700 hover:text-primary-600 transition-colors duration-200"

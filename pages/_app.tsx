@@ -8,13 +8,16 @@ export default function App({ Component, pageProps }: AppProps) {
   return (
     <AuthProvider>
       <Head>
-        <title>Your Store - Premium E-commerce</title>
+        <title>Godless America - Premium E-commerce</title>
         <meta name="description" content="Premium e-commerce platform with Snipcart" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
         
         {/* Snipcart Styles */}
         <link rel="stylesheet" href="https://cdn.snipcart.com/themes/v3.4.1/default/snipcart.css" />
+        
+        {/* Dark Theme CSS */}
+        <link rel="stylesheet" href="/dark-theme.css" />
       </Head>
 
       {/* Snipcart Configuration */}
