@@ -17,10 +17,10 @@ export default function AdminLayout({ children, title = 'Admin Dashboard' }: Adm
   const navigation = [
     { name: 'Dashboard', href: '/admin', icon: '📊' },
     { name: 'Products', href: '/admin/products', icon: '📦' },
-    { name: 'Add Product', href: '/admin/add-product', icon: '➕' },
+    { name: 'Add Product', href: '/admin/products/new', icon: '➕' },
     { name: 'Categories', href: '/admin/categories', icon: '📂' },
     { name: 'Orders', href: '/admin/orders', icon: '🛒' },
-    { name: 'Customers', href: '/admin/customers', icon: '👥' },
+    { name: 'Appearance', href: '/admin/appearance', icon: '🎨' },
     { name: 'Analytics', href: '/admin/analytics', icon: '📈' },
     { name: 'Settings', href: '/admin/settings', icon: '⚙️' },
   ]
