@@ -2,10 +2,11 @@ import '@/styles/globals.css'
 import type { AppProps } from 'next/app'
 import Head from 'next/head'
 import Script from 'next/script'
+import { AuthProvider } from '@/lib/auth'
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
-    <>
+    <AuthProvider>
       <Head>
         <title>Your Store - Premium E-commerce</title>
         <meta name="description" content="Premium e-commerce platform with Snipcart" />
@@ -32,6 +33,6 @@ export default function App({ Component, pageProps }: AppProps) {
         src="https://cdn.snipcart.com/themes/v3.4.1/default/snipcart.js"
         strategy="afterInteractive"
       />
-    </>
+    </AuthProvider>
   )
 }
